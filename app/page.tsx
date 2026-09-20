@@ -4,12 +4,6 @@ import {
   FaEnvelope,
   FaDownload,
   FaLongArrowAltRight,
-  FaServer,
-  FaDatabase,
-  FaCloud,
-  FaShieldAlt,
-  FaTachometerAlt,
-  FaLayerGroup,
 } from "react-icons/fa";
 import { EXPERTISE, PRINCIPLES, PROJECTS, SKILLS } from "../data/content";
 
@@ -90,24 +84,21 @@ export default function Home() {
             <b>stack.ts</b>
           </div>
 
-          <pre>{
-          `const STACK = {
-            name: "Ganesh Pujari",
-            role: "Full Stack Engineer",
+          <pre>{`const STACK = {
+  name: "Ganesh Pujari",
+  role: "Full Stack Engineer",
 
-            frontend: ["Angular", "React", "TypeScript"],
-            backend: ["Node.js", "Express"],
-            databases: ["PostgreSQL", "MongoDB"],
-            cloud: ["Azure"],
+  frontend: ["Angular", "React", "TypeScript"],
+  backend: ["Node.js", "Express"],
+  databases: ["PostgreSQL", "MongoDB"],
+  cloud: ["Azure"],
 
-            mindset: [
-              "secure by design",
-              "performance matters",
-              "keep it maintainable"
-            ]
-          }`
-          }
-          </pre>
+  mindset: [
+    "secure by design",
+    "performance matters",
+    "keep it maintainable"
+  ]
+}`}</pre>
 
           <div className="terminal-footer">
             <span>TypeScript</span>
@@ -153,91 +144,6 @@ export default function Home() {
               proprietary information.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* WHAT I DO */}
-      <section id="what-i-do" className="section shell">
-        <div className="section-label">WHAT I DO</div>
-
-        <div className="expertise-grid">
-          <article className="expertise-card">
-            <div className="icon-box">
-              <FaLayerGroup size={21} />
-            </div>
-
-            <h3>Frontend Engineering</h3>
-
-            <p>
-              Angular and React applications with TypeScript, reusable
-              components, RxJS, state management and clean UI architecture.
-            </p>
-          </article>
-
-          <article className="expertise-card">
-            <div className="icon-box">
-              <FaServer size={21} />
-            </div>
-
-            <h3>Backend Engineering</h3>
-
-            <p>
-              Node.js and Express APIs with authentication, validation, error
-              handling, pagination and maintainable service design.
-            </p>
-          </article>
-
-          <article className="expertise-card">
-            <div className="icon-box">
-              <FaDatabase size={21} />
-            </div>
-
-            <h3>Data & Integrations</h3>
-
-            <p>
-              PostgreSQL, MongoDB and Dataverse with practical database design,
-              query optimization and API integration.
-            </p>
-          </article>
-
-          <article className="expertise-card">
-            <div className="icon-box">
-              <FaShieldAlt size={21} />
-            </div>
-
-            <h3>Security</h3>
-
-            <p>
-              JWT authentication, refresh-token rotation, authorization,
-              password hashing and secure file-access patterns.
-            </p>
-          </article>
-
-          <article className="expertise-card">
-            <div className="icon-box">
-              <FaCloud size={21} />
-            </div>
-
-            <h3>Cloud & Delivery</h3>
-
-            <p>
-              Azure services, blob storage, SAS URLs, GitHub workflows, CI/CD
-              and deployment practices.
-            </p>
-          </article>
-
-          <article className="expertise-card">
-            <div className="icon-box">
-              <FaTachometerAlt size={21} />
-            </div>
-
-            <h3>Performance</h3>
-
-            <p>
-              API optimization, caching, database tuning, pagination and
-              reducing unnecessary frontend and network work.
-            </p>
-          </article>
         </div>
       </section>
 
@@ -331,44 +237,25 @@ export default function Home() {
         <div className="experience-card">
           <div className="experience-head">
             <div>
-              <span className="muted">Professional experience</span>
-              <h2>Full Stack Development</h2>
+              <span className="muted">Application Nexus Webservices, Nashik</span>
+              <h2>Full Stack Engineer</h2>
             </div>
 
-            <span className="period">6+ YEARS</span>
+            <span className="period">JAN 2020 TO PRESENT</span>
           </div>
 
           <div className="experience-content">
             <ul>
-              <li>
-                Developing full-stack web applications using Angular, React,
-                Node.js, TypeScript and REST APIs.
-              </li>
-
-              <li>
-                Working with PostgreSQL, MongoDB and Dataverse for application
-                data and integrations.
-              </li>
-
-              <li>
-                Implementing authentication, refresh-token flows,
-                authorization and secure file-access patterns.
-              </li>
-
-              <li>
-                Working with Azure services and GitHub-based development and
-                delivery workflows.
-              </li>
-
-              <li>
-                Improving API and database performance through query
-                optimization, pagination and caching techniques.
-              </li>
+              <li>Sole developer and infrastructure owner across multiple enterprise production applications: full stack, Azure hosting and CI/CD, with no dedicated DevOps team.</li>
+              <li>Cut page load on a legacy enterprise application from 30+ seconds to under 5 seconds (6x) by separating business and application layers and optimizing OData queries.</li>
+              <li>Built a GitHub Actions CI/CD pipeline from scratch on Azure, taking releases from manual steps to a consistent 4 to 5 minute cycle.</li>
+              <li>Integrated Azure AD B2C, Microsoft Graph API and Dataverse REST APIs for authentication, role-based access control and data synchronization.</li>
+              <li>Delivered role-based access and real-time WebSocket features for a platform with 1,000+ users.</li>
+              <li>Integrated payment gateways (Authorize.Net, Moneris) behind JWT-secured APIs.</li>
             </ul>
 
             <div className="note">
               <span>ENGINEERING FOCUS</span>
-
               <p>
                 Architecture, security, performance and maintainability across
                 frontend, backend and cloud systems.
