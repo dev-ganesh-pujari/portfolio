@@ -326,50 +326,6 @@ h1 em {
    ABOUT
 ================================ */
 
-/* .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-}
-
-.about-grid h2,
-.section-heading h2,
-.contact h2 {
-  font-size: 44px;
-  line-height: 1.08;
-  letter-spacing: -2px;
-  margin: 0;
-}
-
-.about-grid h2 span {
-  color: #727984;
-}
-
-.about-photo {
-  display: flex;
-  align-items: flex-start;
-}
-
-.about-photo img {
-  width: 260px;
-  height: 320px;
-  object-fit: cover;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  filter: grayscale(10%);
-}
-
-
-.about-copy {
-  color: var(--muted);
-  line-height: 1.9;
-  font-size: 15px;
-}
-
-.about-copy p {
-  margin: 0 0 20px;
-} */
-
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
@@ -540,6 +496,55 @@ h1 em {
   line-height: 1.7;
   margin: 0;
 }
+
+/* ================================
+   PROJECTS
+================================ */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.project-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 28px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--line-light);
+  transform: translateY(-2px);
+}
+
+.project-card h3 {
+  font-size: 17px;
+  margin: 0 0 12px;
+}
+
+.project-summary {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+
+.project-bullets {
+  margin: 0 0 20px;
+  padding-left: 18px;
+  color: #b8bec7;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.project-tags {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+
 
 /* ================================
    EXPERIENCE
@@ -771,5 +776,11 @@ h1 em {
   .about-photo img {
     width: 200px;
     height: 250px;
+  }
+}
+
+@media (max-width: 850px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }

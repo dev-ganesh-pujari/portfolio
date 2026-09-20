@@ -11,83 +11,7 @@ import {
   FaTachometerAlt,
   FaLayerGroup,
 } from "react-icons/fa";
-
-const skills = {
-  "Frontend — Core": [
-    "Angular",
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "RxJS",
-    "NgRx",
-    "HTML",
-    "CSS",
-  ],
-  "Backend — Core": [
-    "Node.js",
-    "Express.js",
-    "REST APIs",
-    "Authentication",
-    "JWT",
-    "Refresh Tokens",
-  ],
-  Data: [
-    "PostgreSQL",
-    "MongoDB",
-    "Dataverse",
-    "SQL",
-    "Database Design",
-  ],
-  "Cloud & Delivery": [
-    "Azure",
-    "Azure Blob Storage",
-    "Docker",
-    "GitHub Actions",
-    "CI/CD",
-    "Nginx",
-  ],
-
-};
-
-const expertise = [
-  {
-    icon: FaLayerGroup,
-    title: "Frontend Architecture",
-    text: "Component-driven Angular and React applications with TypeScript, RxJS, state management and maintainable UI architecture.",
-  },
-  {
-    icon: FaServer,
-    title: "Backend Engineering",
-    text: "REST APIs with Node.js and Express, validation, error handling, pagination and service design.",
-  },
-  {
-    icon: FaShieldAlt,
-    title: "Security",
-    text: "JWT access tokens, refresh-token rotation, token revocation, password hashing and authorization.",
-  },
-  {
-    icon: FaDatabase,
-    title: "Data & APIs",
-    text: "PostgreSQL, MongoDB and Dataverse with a focus on query design, indexing and reliable integrations.",
-  },
-  {
-    icon: FaCloud,
-    title: "Cloud & Delivery",
-    text: "Azure services, private blob access, SAS URLs, GitHub workflows and deployment practices.",
-  },
-  {
-    icon: FaTachometerAlt,
-    title: "Performance",
-    text: "API optimization, caching strategies, database tuning, pagination and reducing unnecessary network work.",
-  },
-];
-
-const principles = [
-  "Prefer simple architecture that can evolve.",
-  "Make security part of the design, not an afterthought.",
-  "Measure performance before optimizing it.",
-  "Keep business logic testable and isolated.",
-];
+import { EXPERTISE, PRINCIPLES, PROJECTS, SKILLS, STACK } from "../data/content";
 
 export default function Home() {
   return (
@@ -131,7 +55,8 @@ export default function Home() {
 
           <div className="actions">
             <a className="button primary" href="#projects">
-              Explore my work <FaLongArrowAltRight size={18} />
+              View my experience
+ <FaLongArrowAltRight size={18} />
             </a>
 
             <a className="button ghost" href="#contact">
@@ -165,21 +90,24 @@ export default function Home() {
             <b>stack.ts</b>
           </div>
 
-          <pre>{`const stack = {
-  name: "Ganesh Pujari",
-  role: "Full Stack Engineer",
+          <pre>{
+          `const STACK = {
+            name: "Ganesh Pujari",
+            role: "Full Stack Engineer",
 
-  frontend: ["Angular", "React", "TypeScript"],
-  backend: ["Node.js", "Express"],
-  databases: ["PostgreSQL", "MongoDB"],
-  cloud: ["Azure"],
+            frontend: ["Angular", "React", "TypeScript"],
+            backend: ["Node.js", "Express"],
+            databases: ["PostgreSQL", "MongoDB"],
+            cloud: ["Azure"],
 
-  mindset: [
-    "secure by design",
-    "performance matters",
-    "keep it maintainable"
-  ]
-}; `}</pre>
+            mindset: [
+              "secure by design",
+              "performance matters",
+              "keep it maintainable"
+            ]
+          }`
+          }
+          </pre>
 
           <div className="terminal-footer">
             <span>TypeScript</span>
@@ -318,7 +246,7 @@ export default function Home() {
         <div className="section-label">TECHNICAL STACK</div>
 
         <div className="skills-grid">
-          {Object.entries(skills).map(([group, items]) => (
+          {Object.entries(SKILLS).map(([group, items]) => (
             <div className="skill-group" key={group}>
               <h3>{group}</h3>
 
@@ -346,7 +274,7 @@ export default function Home() {
         </div>
 
         <div className="expertise-grid">
-          {expertise.map(({ icon: Icon, title, text }) => (
+          {EXPERTISE.map(({ icon: Icon, title, text }) => (
             <article className="expertise-card" key={title}>
               <div className="icon-box">
                 <Icon size={21} />
@@ -355,6 +283,42 @@ export default function Home() {
               <h3>{title}</h3>
 
               <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+
+      {/* PROJECTS */}
+      <section id="projects" className="section shell">
+        <div className="section-label">PROJECTS</div>
+
+        <div className="section-heading">
+          <h2>Selected work.</h2>
+          <p>
+            Client and product names are withheld for confidentiality — these
+            reflect real production work, described at the architecture and
+            engineering level.
+          </p>
+        </div>
+
+        <div className="projects-grid">
+          {PROJECTS.map((project) => (
+            <article className="project-card" key={project.title}>
+              <h3>{project.title}</h3>
+              <p className="project-summary">{project.summary}</p>
+
+              <ul className="project-bullets">
+                {project.bullets.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+
+              <div className="tags project-tags">
+                {project.tech.map((t) => (
+                  <span key={t}>{t}</span>
+                ))}
+              </div>
             </article>
           ))}
         </div>
@@ -420,7 +384,7 @@ export default function Home() {
         <div className="section-label">ENGINEERING PRINCIPLES</div>
 
         <div className="principles">
-          {principles.map((principle, index) => (
+          {PRINCIPLES.map((principle, index) => (
             <div key={principle}>
               <span>0{index + 1}</span>
               <p>{principle}</p>
