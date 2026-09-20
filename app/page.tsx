@@ -11,7 +11,7 @@ import {
   FaTachometerAlt,
   FaLayerGroup,
 } from "react-icons/fa";
-import { EXPERTISE, PRINCIPLES, PROJECTS, SKILLS, STACK } from "../data/content";
+import { EXPERTISE, PRINCIPLES, PROJECTS, SKILLS } from "../data/content";
 
 export default function Home() {
   return (
@@ -55,8 +55,8 @@ export default function Home() {
 
           <div className="actions">
             <a className="button primary" href="#projects">
-              View my experience
- <FaLongArrowAltRight size={18} />
+              Explore my work
+              <FaLongArrowAltRight size={18} />
             </a>
 
             <a className="button ghost" href="#contact">
