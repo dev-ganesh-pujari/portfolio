@@ -15,7 +15,6 @@ export const SKILLS = {
     "TypeScript",
     "JavaScript",
     "RxJS",
-    "NgRx",
     "HTML",
     "CSS",
   ],
@@ -37,12 +36,9 @@ export const SKILLS = {
   "Cloud & Delivery": [
     "Azure",
     "Azure Blob Storage",
-    "Docker",
     "GitHub Actions",
     "CI/CD",
-    "Nginx",
   ],
-
 };
 
 export const EXPERTISE = [
