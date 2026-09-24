@@ -294,7 +294,7 @@ export default function Home() {
         <div className="contact-actions">
           <a
             className="button primary"
-            href="mailto:ganeshpujari021@gmail.com"
+            href="mailto:dev.ganesh.pujari@gmail.com"
           >
             <FaEnvelope size={18} />
             Email me
@@ -302,7 +302,7 @@ export default function Home() {
 
           <a
             className="button ghost"
-            href="https://github.com/ganesh-pujari"
+            href="https://github.com/dev-ganesh-pujari"
             target="_blank"
             rel="noreferrer"
           >
@@ -312,7 +312,7 @@ export default function Home() {
 
           <a
             className="button ghost"
-            href="https://linkedin.com/in/ganesh-pujari21"
+            href="https://linkedin.com/in/dev-ganesh-pujari"
             target="_blank"
             rel="noreferrer"
           >
